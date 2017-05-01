@@ -4,9 +4,6 @@ import api.v1.Models.Recipe;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeDAOImpl implements RecipeDAO{
@@ -24,7 +21,7 @@ public class RecipeDAOImpl implements RecipeDAO{
     @Override
     public List<Recipe> listRecipes() {
         Session session = this.sessionFactory.openSession();
-        List<Recipe> recipes = session.createQuery("SELECT name, difficulty, description, duration, icon_image, uuid FROM Recipe").list();
+        List<Recipe> recipes = session.createQuery("FROM Recipe").list();
         return recipes;
     }
 
