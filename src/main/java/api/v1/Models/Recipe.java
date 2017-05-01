@@ -101,4 +101,34 @@ public class Recipe {
     public void setIcon_image(String icon_image) {
         this.icon_image = icon_image;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Recipe recipe = (Recipe) o;
+
+        if (id != recipe.id) return false;
+        if (duration != recipe.duration) return false;
+        if (name != null ? !name.equals(recipe.name) : recipe.name != null) return false;
+        if (difficulty != null ? !difficulty.equals(recipe.difficulty) : recipe.difficulty != null) return false;
+        if (tasks != null ? !tasks.equals(recipe.tasks) : recipe.tasks != null) return false;
+        if (ingredients != null ? !ingredients.equals(recipe.ingredients) : recipe.ingredients != null) return false;
+        if (description != null ? !description.equals(recipe.description) : recipe.description != null) return false;
+        return icon_image != null ? icon_image.equals(recipe.icon_image) : recipe.icon_image == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (difficulty != null ? difficulty.hashCode() : 0);
+        result = 31 * result + (tasks != null ? tasks.hashCode() : 0);
+        result = 31 * result + (ingredients != null ? ingredients.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (int) (duration ^ (duration >>> 32));
+        result = 31 * result + (icon_image != null ? icon_image.hashCode() : 0);
+        return result;
+    }
 }

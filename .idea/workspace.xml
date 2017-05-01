@@ -1,114 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb23ff3c-777b-49ff-b149-a8a2853d9c9e" name="Default" comment="Recipe model added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata.keystream" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata.keystream.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata.values.at" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata_i" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/bc7975bb-99bd-4b20-9f4a-3ca5df141e96/_metadata_/metadata_i.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata.keystream" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata.keystream.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata.values.at" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata_i" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d1f012da-d68c-45cb-8ed0-cbaa1383acc6/_metadata_/metadata_i.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata.keystream" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata.keystream.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata.values.at" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata_i" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_metadata_/metadata_i.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata.keystream" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata.keystream.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata.values.at" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata_i" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_metadata_/metadata_i.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Controllers/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Controllers/PhoneController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Controllers/RecipesController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Dao/PhoneDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Dao/PhoneDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Models/Phone.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Services/PhoneService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/api/v1/Services/PhoneServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/close.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/collapsed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/expanded.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/external.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/icon_error_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/icon_info_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/icon_success_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/icon_warning_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/logos/maven-feather.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/images/newwindow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/storage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/storage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_10_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_0_0_jre7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Controllers/PhoneController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Controllers/StepsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Dao/PhoneDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Dao/PhoneDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Models/Phone.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Models/Recipe.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Services/PhoneService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Services/PhoneServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Phone.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Recipe.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Phone.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Recipe.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/css/maven-base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/css/maven-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/css/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/css/site.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/dependencies.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/dependency-info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/site/dependency-management.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Controllers/StepsController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Models/Recipe.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Controllers/Application.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Controllers/RecipesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Controllers/StepsController.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Controllers/Application.java" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Controllers/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Controllers/RecipesController.java" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Controllers/RecipesController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/classes/Models/Recipe.class" afterPath="$PROJECT_DIR$/target/classes/api/v1/Models/Recipe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MyRecipe-1.0.jar" afterPath="$PROJECT_DIR$/target/MyRecipe-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MyRecipe-1.0.jar.original" afterPath="$PROJECT_DIR$/target/MyRecipe-1.0.jar.original" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+    <list default="true" id="fb23ff3c-777b-49ff-b149-a8a2853d9c9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyRecipe.iml" afterPath="$PROJECT_DIR$/MyRecipe.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/api/v1/Models/Recipe.java" afterPath="$PROJECT_DIR$/src/main/java/api/v1/Models/Recipe.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/css/maven-theme.css" afterPath="$PROJECT_DIR$/target/site/css/maven-theme.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -283,8 +179,8 @@
       <file leaf-file-name="Recipe.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/api/v1/Models/Recipe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="421">
+              <caret line="122" column="27" lean-forward="true" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#473#474#0" expanded="true" />
@@ -343,8 +239,8 @@
       <file leaf-file-name="Phone.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/api/v1/Models/Phone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="471">
+              <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -455,9 +351,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-1" />
+    <option name="y" value="-27" />
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -569,10 +465,6 @@
               <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -601,32 +493,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyRecipe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyRecipe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1292,12 +1158,20 @@
       <workItem from="1493628449537" duration="3731000" />
       <workItem from="1493636213703" duration="27000" />
       <workItem from="1493636278069" duration="8302000" />
-      <workItem from="1493644848593" duration="1781000" />
+      <workItem from="1493644848593" duration="2291000" />
     </task>
+    <task id="LOCAL-00001" summary="Recipe model added">
+      <created>1493646672305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1493646672305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47811000" />
+    <option name="totallyTimeSpent" value="48321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1309,7 +1183,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="-27" width="1366" height="795" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1318,7 +1193,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34621212" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25984848" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.52196383" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1329,12 +1204,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972136" sideWeight="0.4878788" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.4878788" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5121212" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37151703" sideWeight="0.5348485" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.47803617" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23787878" sideWeight="0.40826872" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22727273" sideWeight="0.40826872" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2689394" sideWeight="0.59173125" order="6" side_tool="true" content_ui="tabs" />
@@ -1776,16 +1651,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/api/v1/Models/Phone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="471">
+          <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/api/v1/Models/Recipe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="421">
+          <caret line="122" column="27" lean-forward="true" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
