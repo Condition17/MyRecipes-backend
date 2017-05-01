@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="api.v1.Models.Recipe" table="Recipes">
+        <meta attribute="class-description">
+            This class contains the phones details.
+        </meta>
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+
+        <property name="name" column="name" type="string"/>
+        <property name="difficulty" column="difficulty" type="string"/>
+        <property name="tasks" column="tasks" type="json"/>
+        <property name="ingredients" column="ingredients" type="json"/>
+        <property name="description" column="description" type="string"/>
+        <property name="duration" column="duration" type="integer"/>
+        <property name="icon_image" column="duration" type="string"/>
+    </class>
+</hibernate-mapping>

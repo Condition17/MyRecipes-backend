@@ -1,4 +1,10 @@
-/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/Controllers/RecipesController.java
-/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/Models/Recipe.java
-/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/Controllers/Application.java
-/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/Controllers/StepsController.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Controllers/Application.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Models/Phone.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Controllers/RecipesController.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Controllers/PhoneController.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Dao/PhoneDAO.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Controllers/StepsController.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Dao/PhoneDAOImpl.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Models/Recipe.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Services/PhoneServiceImpl.java
+/home/cristi/Programming/FMI/an2/sem2/mds/proiect/MyRecipe/src/main/java/api/v1/Services/PhoneService.java
