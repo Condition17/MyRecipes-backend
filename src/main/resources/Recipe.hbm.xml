@@ -13,10 +13,9 @@
 
         <property name="name" column="name" type="string"/>
         <property name="difficulty" column="difficulty" type="string"/>
-        <property name="tasks" column="tasks" type="json"/>
-        <property name="ingredients" column="ingredients" type="json"/>
         <property name="description" column="description" type="string"/>
         <property name="duration" column="duration" type="integer"/>
-        <property name="icon_image" column="duration" type="string"/>
+        <property name="icon_image" column="icon_image" type="string"/>
+        <property name="uuid" column="uuid" type="string"/>
     </class>
 </hibernate-mapping>

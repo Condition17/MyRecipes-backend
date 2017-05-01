@@ -15,11 +15,11 @@
         <property name="hbm2ddl.auto">create</property>
 
         <property name="show_sql">true</property>
-
+        <property name="hibernate.dialect">com.bazarnazar.pgjson.JsonPostgreSQLDialect</property>
 
 
         <mapping resource="Phone.hbm.xml"></mapping>
-
+        <mapping resource="Recipe.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>
