@@ -1,5 +1,6 @@
 package api.v1.Dao;
 
+import api.v1.Models.Image;
 import api.v1.Models.Recipe;
 import com.sun.corba.se.spi.ior.ObjectKey;
 import com.sun.org.apache.regexp.internal.RE;
@@ -14,6 +15,7 @@ import javax.persistence.criteria.ParameterExpression;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class RecipeDAOImpl implements RecipeDAO{
 
@@ -38,16 +40,15 @@ public class RecipeDAOImpl implements RecipeDAO{
 
     @Override
     public JSONObject getRecipeByUuid(String uid) {
+
         Session session = this.sessionFactory.openSession();
-        CriteriaQuery<Recipe> crit_query = session.getCriteriaBuilder().createQuery(Recipe.class);
-        Root<Recipe> recipes = crit_query.from(Recipe.class);
-        crit_query.multiselect(recipes.get("name"));
-        crit_query.where(session.getCriteriaBuilder().equal(recipes.get("uuid"), uid));
-        List<Recipe> list = session.createQuery(crit_query).setMaxResults(1).list();
-        return list.size() > 0 ? proper_jsonify(list.get(0)) : null;
+        List<Recipe> list = session.createQuery(" from Recipe R where R.uuid = :uid")
+                            .setParameter("uid",uid).setMaxResults(1).list();
+        return list.size() > 0 ? jsonify(list.get(0)) : null;
+
     }
 
-    private JSONObject proper_jsonify( Object[] r){
+    private JSONObject jsonifyList( Object[] r){
         JSONObject recipe = new JSONObject();
         recipe.appendField("name", r[0]);
         recipe.appendField("difficulty", r[1]);
@@ -57,22 +58,20 @@ public class RecipeDAOImpl implements RecipeDAO{
         return recipe;
     }
 
-    private JSONObject proper_jsonify( Recipe r){
+    private JSONObject jsonify( Recipe r){
         JSONObject recipe = new JSONObject();
         recipe.appendField("name", r.getName());
         recipe.appendField("images", r.getImages());
         recipe.appendField("difficulty", r.getDifficulty());
         recipe.appendField("duration", r.getDuration());
         recipe.appendField("icon_image", r.getIcon_image());
-        //should add ingredients
-        //       recipe.appendField("steps")
         return recipe;
     }
 
     private List<JSONObject> showable(List<Object[]> recipes){
         List<JSONObject> objects = new ArrayList<>();
         for( Object[] r : recipes){
-            JSONObject recipe = proper_jsonify(r);
+            JSONObject recipe = jsonifyList(r);
             objects.add( recipe );
         }
         return objects;

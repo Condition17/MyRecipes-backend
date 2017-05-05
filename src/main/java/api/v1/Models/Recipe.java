@@ -14,8 +14,12 @@ public class Recipe {
     private Set images;
     private Set steps;
 
-    public Recipe(String name) {
+    public Recipe(String name, String difficulty, Set images, String icon_image, int duration){
         this.name = name;
+        this.difficulty = difficulty;
+        this.images = null;
+        this.icon_image = icon_image;
+        this.duration = duration;
     }
 
     public Recipe(String name, String difficulty, String description, long duration, String icon_image) {
