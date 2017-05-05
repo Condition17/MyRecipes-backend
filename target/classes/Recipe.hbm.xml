@@ -11,6 +11,16 @@
             <generator class="native"/>
         </id>
 
+        <set name="images" cascade="all">
+            <key column="recipe_id"/>
+            <one-to-many class="api.v1.Models.Image"/>
+        </set>
+
+        <set name="steps" cascade="all">
+            <key column="recipe_id"/>
+            <one-to-many class="api.v1.Models.Step"/>
+        </set>
+
         <property name="name" column="name" type="string"/>
         <property name="difficulty" column="difficulty" type="string"/>
         <property name="description" column="description" type="string"/>

@@ -7,6 +7,7 @@ import api.v1.Services.RecipeServiceImpl;
 import net.minidev.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,22 +24,22 @@ public class RecipesController {
     public ResponseEntity<?> index(@RequestParam(value="page")Integer page_number){
 
         JSONObject res = new JSONObject();
-        List<Recipe> list = this.recipeService.listRecipes();
-        int left_limit = (page_number-1)*page_size;
-        int right_limit = page_number*page_size;
+        Integer initial_row = (page_number-1)*page_size;
 
-        if( left_limit > list.size() || left_limit < 0) {
-            res.appendField("recipes", new ArrayList<Recipe>());
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
-        }else{
-            res.appendField("recipes",list.subList( left_limit , right_limit > list.size() ? list.size() : right_limit ) );
-            return ResponseEntity.status(HttpStatus.OK).body(res);
+        if( initial_row >= 0) {
+            List<JSONObject> list = this.recipeService.listRecipes(initial_row, page_size);
+            res.appendField("recipes", list);
+            return (list.size() > 0) ? ResponseEntity.status(HttpStatus.OK).body(res) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
         }
+
+        res.appendField("recipes", new ArrayList<>());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
 
     }
 
     @RequestMapping("/api/v1/recipes/{uid}")
-    public Recipe show() {
-        return null;
+    public ResponseEntity<?> show(@PathVariable("uid")	String uid) {
+        JSONObject recipe = this.recipeService.getRecipeByUuid(uid);
+        return (recipe != null) ? ResponseEntity.status(HttpStatus.OK).body(recipe) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new JSONObject());
     }
 }

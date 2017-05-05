@@ -1,33 +1,22 @@
 package api.v1.Models;
 
 import javax.persistence.*;
-
-@Entity
-@Table(name= "recipes")
+import java.util.Set;
 
 public class Recipe {
-    @Id
-    @Column( name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    @Column(name = "name")
     private String name;
-
-    @Column(name = "difficulty")
     private String difficulty;
-
-    @Column(name = "description")
     private String description;
-
-    @Column(name = "duration")
     private long duration;
-
-    @Column(name = "icon_image")
     private String icon_image;
-
-    @Column(name = "uuid")
     private String uuid;
+    private Set images;
+    private Set steps;
+
+    public Recipe(String name) {
+        this.name = name;
+    }
 
     public Recipe(String name, String difficulty, String description, long duration, String icon_image) {
         this.name = name;
@@ -48,12 +37,12 @@ public class Recipe {
         this.uuid = uuid;
     }
 
-    public long getId() {
-        return id;
-    }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setName(String name) {
@@ -96,6 +85,22 @@ public class Recipe {
         this.icon_image = icon_image;
     }
 
+    public Set getImages() {
+        return images;
+    }
+
+    public void setImages(Set images) {
+        this.images = images;
+    }
+
+    public Set getSteps() {
+        return steps;
+    }
+
+    public void setSteps(Set steps) {
+        this.steps = steps;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -113,7 +118,7 @@ public class Recipe {
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = id ^ (id >>> 32);
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (difficulty != null ? difficulty.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);

@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="api.v1.Models.Phone" table="Phone">
+    <class name="api.v1.Models.Step" table="Steps">
         <meta attribute="class-description">
-            This class contains the phones details.
+            This class contains the details about all the recipes steps.
         </meta>
+
         <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
+
         <property name="name" column="name" type="string"/>
-        <property name="review" column="review" type="string"/>
+        <property name="description" column="description" type="string"/>
 
     </class>
 </hibernate-mapping>
