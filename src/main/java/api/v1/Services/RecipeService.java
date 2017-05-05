@@ -7,4 +7,5 @@ import java.util.List;
 public interface RecipeService {
     List<JSONObject> listRecipes(Integer initial_row, Integer rows);
     JSONObject getRecipeByUuid(String uuid);
+    JSONObject getRecipePreview( String uuid);
 }

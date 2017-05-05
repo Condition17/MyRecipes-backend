@@ -20,4 +20,9 @@ public class RecipeServiceImpl implements RecipeService {
     public JSONObject getRecipeByUuid(String uuid) {
         return this.recipeDAO.getRecipeByUuid(uuid);
     }
+
+    @Override
+    public JSONObject getRecipePreview(String uuid){
+        return this.recipeDAO.getRecipePreview(uuid);
+    }
 }

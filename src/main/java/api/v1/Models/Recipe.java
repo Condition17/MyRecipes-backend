@@ -13,14 +13,7 @@ public class Recipe {
     private String uuid;
     private Set images;
     private Set steps;
-
-    public Recipe(String name, String difficulty, Set images, String icon_image, int duration){
-        this.name = name;
-        this.difficulty = difficulty;
-        this.images = null;
-        this.icon_image = icon_image;
-        this.duration = duration;
-    }
+    private Set ingredients;
 
     public Recipe(String name, String difficulty, String description, long duration, String icon_image) {
         this.name = name;
@@ -103,6 +96,14 @@ public class Recipe {
 
     public void setSteps(Set steps) {
         this.steps = steps;
+    }
+
+    public void setIngredients(Set ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public Set getIngredients() {
+        return ingredients;
     }
 
     @Override

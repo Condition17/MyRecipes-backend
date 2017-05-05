@@ -1,6 +1,7 @@
 package api.v1.Dao;
 
 import api.v1.Models.Image;
+import api.v1.Models.Ingredient;
 import api.v1.Models.Recipe;
 import com.sun.corba.se.spi.ior.ObjectKey;
 import com.sun.org.apache.regexp.internal.RE;
@@ -48,23 +49,44 @@ public class RecipeDAOImpl implements RecipeDAO{
 
     }
 
+    @Override
+    public JSONObject getRecipePreview(String uid) {
+
+        Session session = this.sessionFactory.openSession();
+        List<Recipe> list = session.createQuery(" from Recipe R where R.uuid = :uid")
+                .setParameter("uid",uid).setMaxResults(1).list();
+        return list.size() > 0 ? preview(list.get(0)) : null;
+
+    }
+
+    private JSONObject preview( Recipe r){
+        JSONObject preview = new JSONObject();
+        preview.appendField("name", r.getName());
+        preview.appendField("difficulty", r.getDifficulty());
+        preview.appendField("duration", r.getDuration());
+        preview.appendField("icon_image", r.getIcon_image());
+        preview.appendField("uid", r.getIcon_image());
+        return preview;
+    }
+
     private JSONObject jsonifyList( Object[] r){
         JSONObject recipe = new JSONObject();
         recipe.appendField("name", r[0]);
         recipe.appendField("difficulty", r[1]);
         recipe.appendField("duration", r[2]);
         recipe.appendField("icon_image", r[3]);
-        recipe.appendField("uuid", r[4]);
+        recipe.appendField("uid", r[4]);
         return recipe;
     }
 
     private JSONObject jsonify( Recipe r){
         JSONObject recipe = new JSONObject();
         recipe.appendField("name", r.getName());
-        recipe.appendField("images", r.getImages());
+        recipe.appendField("images", imagesOf(r));
         recipe.appendField("difficulty", r.getDifficulty());
         recipe.appendField("duration", r.getDuration());
         recipe.appendField("icon_image", r.getIcon_image());
+        recipe.appendField("ingredients", ingredientsOf(r) );
         return recipe;
     }
 
@@ -75,5 +97,29 @@ public class RecipeDAOImpl implements RecipeDAO{
             objects.add( recipe );
         }
         return objects;
+    }
+
+    private List<String> imagesOf( Recipe r){
+        List<String> urls = new ArrayList<>();
+        Set<Image> images = r.getImages();
+        for( Image im: images) urls.add(im.getUrl());
+        return urls;
+    }
+
+    private List<JSONObject> ingredientsOf( Recipe r){
+
+        List<JSONObject> jsonIngredients = new ArrayList<>();
+        Set<Ingredient> ingredients = r.getIngredients();
+
+        for( Ingredient ing : ingredients){
+
+            JSONObject ingredient = new JSONObject();
+            ingredient.appendField("name",ing.getName());
+            ingredient.appendField("quantity", ing.getQuantity());
+            ingredient.appendField("unit", ing.getUnit());
+            jsonIngredients.add(ingredient);
+
+        }
+        return jsonIngredients;
     }
 }
