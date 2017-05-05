@@ -15,6 +15,6 @@
         <mapping resource="Recipe.hbm.xml"></mapping>
         <mapping resource="Image.hbm.xml"></mapping>
         <mapping resource="Step.hbm.xml"></mapping>
-
+        <mapping resource="Ingredient.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>
