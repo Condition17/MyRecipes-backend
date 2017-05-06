@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @RestController
 public class RecipesController {
@@ -63,8 +64,9 @@ public class RecipesController {
         }
 
         String search_sentence = (String) req.get("keywords");
-        res.put("recipes", this.recipeService.searchRecipesBySentence( search_sentence, initial_row, page_size));
-        return ResponseEntity.status(HttpStatus.OK).body(res);
+        Set<JSONObject> results = this.recipeService.searchRecipesBySentence( search_sentence, initial_row, page_size);
+        res.put("recipes", results);
+        return  results.size() > 0 ? ResponseEntity.status(HttpStatus.OK).body(res) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
     }
 }
 

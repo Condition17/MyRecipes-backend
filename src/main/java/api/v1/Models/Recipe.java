@@ -5,6 +5,7 @@ import java.util.Set;
 
 public class Recipe {
     private int id;
+    @Column(name="name")
     private String name;
     private String difficulty;
     private String description;

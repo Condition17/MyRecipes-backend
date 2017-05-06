@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-05.21:01:34.302</IntrospectionTimestamp>
-      <IntrospectionStateNumber>7503</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-06.15:33:33.260</IntrospectionTimestamp>
+      <IntrospectionStateNumber>7550</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -30,390 +30,307 @@
       <ObjectId>12153</ObjectId>
     </schema>
     <sequence id="9" parent="3" name="hibernate_sequence">
-      <ObjectId>18280</ObjectId>
-      <StateNumber>7339</StateNumber>
+      <ObjectId>18610</ObjectId>
+      <StateNumber>7534</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
     </sequence>
-    <sequence id="10" parent="3" name="steps_id_seq">
-      <ObjectId>18539</ObjectId>
-      <StateNumber>7498</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <sequence id="11" parent="3" name="steps_recipe_id_seq">
-      <ObjectId>18541</ObjectId>
-      <StateNumber>7498</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <sequence id="12" parent="3" name="images_id_seq">
-      <ObjectId>16804</ObjectId>
-      <StateNumber>6657</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <sequence id="13" parent="3" name="images_recipe_id_seq">
-      <ObjectId>16874</ObjectId>
-      <StateNumber>6711</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <sequence id="14" parent="3" name="ingredients_id_seq">
-      <ObjectId>17046</ObjectId>
-      <StateNumber>6789</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <sequence id="15" parent="3" name="ingredients_recipe_id_seq">
-      <ObjectId>17058</ObjectId>
-      <StateNumber>6791</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <sequence id="16" parent="3" name="recipes_id_seq">
-      <ObjectId>18503</ObjectId>
-      <StateNumber>7451</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-    </sequence>
-    <table id="17" parent="3" name="images">
-      <ObjectId>16806</ObjectId>
-      <StateNumber>7486</StateNumber>
+    <table id="10" parent="3" name="images">
+      <ObjectId>18612</ObjectId>
+      <StateNumber>7539</StateNumber>
     </table>
-    <table id="18" parent="3" name="ingredients">
-      <ObjectId>17048</ObjectId>
-      <StateNumber>7503</StateNumber>
+    <table id="11" parent="3" name="ingredients">
+      <ObjectId>18617</ObjectId>
+      <StateNumber>7540</StateNumber>
     </table>
-    <table id="19" parent="3" name="recipes">
-      <ObjectId>18290</ObjectId>
-      <StateNumber>7503</StateNumber>
+    <table id="12" parent="3" name="recipes">
+      <ObjectId>18625</ObjectId>
+      <StateNumber>7541</StateNumber>
     </table>
-    <table id="20" parent="3" name="steps">
-      <ObjectId>18543</ObjectId>
-      <StateNumber>7500</StateNumber>
+    <table id="13" parent="3" name="steps">
+      <ObjectId>18633</ObjectId>
+      <StateNumber>7541</StateNumber>
     </table>
-    <routine id="21" parent="3" name="uuid_generate_v1">
+    <routine id="14" parent="3" name="uuid_generate_v1">
       <ObjectId>17358</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="22" parent="3" name="uuid_generate_v1mc">
+    <routine id="15" parent="3" name="uuid_generate_v1mc">
       <ObjectId>17359</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="23" parent="3" name="uuid_generate_v3">
+    <routine id="16" parent="3" name="uuid_generate_v3">
       <ObjectId>17360</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="24" parent="3" name="uuid_generate_v4">
+    <routine id="17" parent="3" name="uuid_generate_v4">
       <ObjectId>17361</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="25" parent="3" name="uuid_generate_v5">
+    <routine id="18" parent="3" name="uuid_generate_v5">
       <ObjectId>17362</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="26" parent="3" name="uuid_nil">
+    <routine id="19" parent="3" name="uuid_nil">
       <ObjectId>17353</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="27" parent="3" name="uuid_ns_dns">
+    <routine id="20" parent="3" name="uuid_ns_dns">
       <ObjectId>17354</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="28" parent="3" name="uuid_ns_oid">
+    <routine id="21" parent="3" name="uuid_ns_oid">
       <ObjectId>17356</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="29" parent="3" name="uuid_ns_url">
+    <routine id="22" parent="3" name="uuid_ns_url">
       <ObjectId>17355</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="30" parent="3" name="uuid_ns_x500">
+    <routine id="23" parent="3" name="uuid_ns_x500">
       <ObjectId>17357</ObjectId>
       <StateNumber>6933</StateNumber>
       <LanguageName>c</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <column id="31" parent="17" name="id">
+    <column id="24" parent="10" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6657</StateNumber>
-      <SequenceName>images_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;images_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>7535</StateNumber>
     </column>
-    <column id="32" parent="17" name="url">
+    <column id="25" parent="10" name="url">
       <Position>2</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>6657</StateNumber>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>7535</StateNumber>
     </column>
-    <column id="33" parent="17" name="recipe_id">
-      <Position>4</Position>
-      <DataType>bigint|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>7464</StateNumber>
-      <SequenceName>images_recipe_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;images_recipe_id_seq&apos;::regclass)</DefaultExpression>
+    <column id="26" parent="10" name="recipe_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>7535</StateNumber>
     </column>
-    <index id="34" parent="17" name="images_id_uindex">
-      <ObjectId>16815</ObjectId>
+    <index id="27" parent="10" name="images_pkey">
+      <ObjectId>18615</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="35" parent="17" name="images_pkey">
-      <ObjectId>16813</ObjectId>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="36" parent="17" name="images_pkey">
-      <ObjectId>16814</ObjectId>
+    <key id="28" parent="10" name="images_pkey">
+      <ObjectId>18616</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>images_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="37" parent="17" name="images_recipes_id_fk">
-      <ObjectId>18533</ObjectId>
+    <foreign-key id="29" parent="10" name="fkjjw47inkeo3eewwl4dbsnd1f0">
+      <ObjectId>18641</ObjectId>
       <ColNames>recipe_id</ColNames>
       <RefTableName>recipes</RefTableName>
       <RefKeyName>recipes_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
-      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="38" parent="18" name="id">
+    <column id="30" parent="11" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6789</StateNumber>
-      <SequenceName>ingredients_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;ingredients_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>7536</StateNumber>
     </column>
-    <column id="39" parent="18" name="name">
+    <column id="31" parent="11" name="name">
       <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>6789</StateNumber>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>7536</StateNumber>
     </column>
-    <column id="40" parent="18" name="quantity">
+    <column id="32" parent="11" name="quantity">
       <Position>3</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>6789</StateNumber>
+      <DataType>integer|0</DataType>
+      <StateNumber>7536</StateNumber>
     </column>
-    <column id="41" parent="18" name="unit">
+    <column id="33" parent="11" name="unit">
       <Position>4</Position>
-      <DataType>varchar(10)|0</DataType>
-      <StateNumber>6789</StateNumber>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>7536</StateNumber>
     </column>
-    <column id="42" parent="18" name="recipe_id">
+    <column id="34" parent="11" name="recipe_id">
       <Position>5</Position>
-      <DataType>bigint|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>6791</StateNumber>
-      <SequenceName>ingredients_recipe_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;ingredients_recipe_id_seq&apos;::regclass)</DefaultExpression>
+      <DataType>integer|0</DataType>
+      <StateNumber>7536</StateNumber>
     </column>
-    <index id="43" parent="18" name="ingredients_id_uindex">
-      <ObjectId>17057</ObjectId>
+    <index id="35" parent="11" name="ingredients_pkey">
+      <ObjectId>18623</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="44" parent="18" name="ingredients_pkey">
-      <ObjectId>17055</ObjectId>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="45" parent="18" name="ingredients_pkey">
-      <ObjectId>17056</ObjectId>
+    <key id="36" parent="11" name="ingredients_pkey">
+      <ObjectId>18624</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>ingredients_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="46" parent="18" name="ingredients_recipes_id_fk">
-      <ObjectId>18559</ObjectId>
+    <foreign-key id="37" parent="11" name="fkqjmq3leho52vlop18r1ml4juy">
+      <ObjectId>18646</ObjectId>
       <ColNames>recipe_id</ColNames>
       <RefTableName>recipes</RefTableName>
       <RefKeyName>recipes_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
-      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="47" parent="19" name="id">
+    <column id="38" parent="12" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>7452</StateNumber>
-      <SequenceName>recipes_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;recipes_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>7537</StateNumber>
     </column>
-    <column id="48" parent="19" name="name">
+    <column id="39" parent="12" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>7341</StateNumber>
+      <StateNumber>7537</StateNumber>
     </column>
-    <column id="49" parent="19" name="difficulty">
+    <column id="40" parent="12" name="difficulty">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>7341</StateNumber>
+      <StateNumber>7537</StateNumber>
     </column>
-    <column id="50" parent="19" name="description">
+    <column id="41" parent="12" name="description">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>7341</StateNumber>
+      <StateNumber>7537</StateNumber>
     </column>
-    <column id="51" parent="19" name="duration">
+    <column id="42" parent="12" name="duration">
       <Position>5</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>7341</StateNumber>
+      <StateNumber>7537</StateNumber>
     </column>
-    <column id="52" parent="19" name="icon_image">
+    <column id="43" parent="12" name="icon_image">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>7341</StateNumber>
+      <StateNumber>7537</StateNumber>
     </column>
-    <column id="53" parent="19" name="uuid">
+    <column id="44" parent="12" name="uuid">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>7458</StateNumber>
-      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <StateNumber>7537</StateNumber>
     </column>
-    <index id="54" parent="19" name="recipes_pkey">
-      <ObjectId>18296</ObjectId>
+    <index id="45" parent="12" name="recipes_pkey">
+      <ObjectId>18631</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="55" parent="19" name="recipes_uuid_uindex">
-      <ObjectId>18507</ObjectId>
-      <ColNames>uuid</ColNames>
-      <Unique>1</Unique>
+    <index id="46" parent="12" name="recipes_name_index">
+      <ObjectId>18657</ObjectId>
+      <ColNames>name</ColNames>
     </index>
-    <key id="56" parent="19" name="recipes_pkey">
-      <ObjectId>18297</ObjectId>
+    <key id="47" parent="12" name="recipes_pkey">
+      <ObjectId>18632</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>recipes_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="57" parent="20" name="id">
+    <column id="48" parent="13" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>7498</StateNumber>
-      <SequenceName>steps_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;steps_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>7538</StateNumber>
     </column>
-    <column id="58" parent="20" name="name">
+    <column id="49" parent="13" name="name">
       <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>7498</StateNumber>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>7538</StateNumber>
     </column>
-    <column id="59" parent="20" name="description">
+    <column id="50" parent="13" name="description">
       <Position>3</Position>
-      <DataType>text|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>7498</StateNumber>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>7538</StateNumber>
     </column>
-    <column id="60" parent="20" name="recipe_id">
+    <column id="51" parent="13" name="recipe_id">
       <Position>4</Position>
-      <DataType>bigint|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>7498</StateNumber>
-      <SequenceName>steps_recipe_id_seq</SequenceName>
-      <DefaultExpression>nextval(&apos;steps_recipe_id_seq&apos;::regclass)</DefaultExpression>
+      <DataType>integer|0</DataType>
+      <StateNumber>7538</StateNumber>
     </column>
-    <index id="61" parent="20" name="steps_id_uindex">
-      <ObjectId>18553</ObjectId>
+    <index id="52" parent="13" name="steps_pkey">
+      <ObjectId>18639</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="62" parent="20" name="steps_pkey">
-      <ObjectId>18551</ObjectId>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="63" parent="20" name="steps_pkey">
-      <ObjectId>18552</ObjectId>
+    <key id="53" parent="13" name="steps_pkey">
+      <ObjectId>18640</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>steps_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="64" parent="20" name="steps_recipes_id_fk">
-      <ObjectId>18554</ObjectId>
+    <foreign-key id="54" parent="13" name="fkl0ribpe0br3dtjb3gpai3hx8t">
+      <ObjectId>18651</ObjectId>
       <ColNames>recipe_id</ColNames>
       <RefTableName>recipes</RefTableName>
       <RefKeyName>recipes_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
-      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <argument id="65" parent="21">
+    <argument id="55" parent="14">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="66" parent="22">
+    <argument id="56" parent="15">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="67" parent="23" name="namespace">
+    <argument id="57" parent="16" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="68" parent="23" name="name">
+    <argument id="58" parent="16" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </argument>
-    <argument id="69" parent="23">
+    <argument id="59" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="70" parent="24">
+    <argument id="60" parent="17">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="71" parent="25" name="namespace">
+    <argument id="61" parent="18" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="72" parent="25" name="name">
+    <argument id="62" parent="18" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </argument>
-    <argument id="73" parent="25">
+    <argument id="63" parent="18">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="74" parent="26">
+    <argument id="64" parent="19">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="75" parent="27">
+    <argument id="65" parent="20">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="76" parent="28">
+    <argument id="66" parent="21">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="77" parent="29">
+    <argument id="67" parent="22">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
-    <argument id="78" parent="30">
+    <argument id="68" parent="23">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0</DataType>
     </argument>
