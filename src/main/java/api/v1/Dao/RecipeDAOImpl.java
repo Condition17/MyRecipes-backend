@@ -59,6 +59,22 @@ public class RecipeDAOImpl implements RecipeDAO{
 
     }
 
+    @Override
+    public  List<JSONObject> searchRecipesByKeyword( String keyword, Integer initial_row, Integer rows){
+        Session session = this.sessionFactory.openSession();
+        List<Object[]> recipes =
+                session.createQuery("select name, difficulty, duration, icon_image, uuid from Recipe " +
+                "where lower(trim(name)) like(:startKeyword) or " +
+                "lower(trim(name)) like (:containedKeyword) or " +
+                "lower(trim(name)) like (:finalKeyword)")
+                .setParameter("startKeyword", (keyword+'%'))
+                .setParameter("containedKeyword", ('%' + keyword + '%') )
+                .setParameter("finalKeyword", ('%'+keyword) )
+                .setFirstResult(initial_row)
+                .setMaxResults(rows).list();
+        return showable(recipes);
+    }
+
     private JSONObject preview( Recipe r){
         JSONObject preview = new JSONObject();
         preview.appendField("name", r.getName());

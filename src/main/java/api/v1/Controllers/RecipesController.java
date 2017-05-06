@@ -7,13 +7,11 @@ import api.v1.Services.RecipeServiceImpl;
 import net.minidev.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class RecipesController {
@@ -48,4 +46,25 @@ public class RecipesController {
         JSONObject recipe = this.recipeService.getRecipePreview(uid);
         return (recipe != null) ? ResponseEntity.status(HttpStatus.OK).body(recipe) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new JSONObject());
     }
+
+    @RequestMapping(value = "/api/v1/recipes", method = RequestMethod.POST)
+    public ResponseEntity<?> search( @RequestBody Map<String,Object> req ){
+        Integer page_number = 0;
+        Integer initial_row = 0;
+        JSONObject res = new JSONObject();
+        res.appendField("recipes", new ArrayList<>());
+
+        try{
+            page_number = (Integer) req.get("page");
+            initial_row = (page_number-1)*page_size;
+            if ( initial_row < 0 ) throw new Exception();
+        }catch( Exception e){
+            return ResponseEntity.status(HttpStatus.OK).body(res);
+        }
+
+        String search_sentence = (String) req.get("keywords");
+        res.put("recipes", this.recipeService.searchRecipesBySentence( search_sentence, initial_row, page_size));
+        return ResponseEntity.status(HttpStatus.OK).body(res);
+    }
 }
+

@@ -6,7 +6,9 @@ import api.v1.Models.Recipe;
 import net.minidev.json.JSONObject;
 
 import javax.transaction.Transactional;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RecipeServiceImpl implements RecipeService {
     private RecipeDAO recipeDAO = new RecipeDAOImpl();
@@ -24,5 +26,18 @@ public class RecipeServiceImpl implements RecipeService {
     @Override
     public JSONObject getRecipePreview(String uuid){
         return this.recipeDAO.getRecipePreview(uuid);
+    }
+
+    @Override
+    public Set<JSONObject> searchRecipesBySentence(String sentence, Integer initial_row, Integer rows ){
+        sentence = sentence.trim();
+        Set<JSONObject> results = new HashSet<>();
+
+        for( String keyword : sentence.split(" ")){
+            List<JSONObject> recipes = this.recipeDAO.searchRecipesByKeyword(keyword, initial_row, rows);
+            for( JSONObject recipe : recipes) results.add(recipe);
+
+        }
+        return results;
     }
 }

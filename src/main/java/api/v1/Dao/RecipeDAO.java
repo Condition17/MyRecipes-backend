@@ -8,4 +8,5 @@ public interface RecipeDAO {
     List<JSONObject> listRecipes(Integer initial_row, Integer rows);
     JSONObject getRecipeByUuid(String uuid);
     JSONObject getRecipePreview(String uuid);
+    List<JSONObject> searchRecipesByKeyword( String keyword, Integer initial_row, Integer rows );
 }
