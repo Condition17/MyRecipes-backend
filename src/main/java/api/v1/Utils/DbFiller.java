@@ -27,10 +27,8 @@ public class DbFiller {
             "magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex " +
             "ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 
-    static final String[] keywords = {"chicken","ham","lamb","soup"};
-//    "pizza","hamburger","porc","egg","salad",
-//            "cocktail","italian", "greek", "american", "chocolate","desert","cherry","gordon","indian",
-//            "pineapple", "pie", "turkey", "fish", "tomato", "squid", "herbs", "spaghetti", "baked", "fried"};
+    static final String[] keywords = {"chicken","ham","lamb","soup","pizza","hamburger","porc","egg","salad","cocktail","italian", "greek", "american", "chocolate","desert","cherry","gordon","indian",
+            "pineapple", "pie", "turkey", "fish", "tomato", "squid", "herbs", "spaghetti", "baked", "fried"};
     static final RecipeService recipeService = new RecipeServiceImpl();
     public static void main(String[] args) throws IOException {
 
@@ -45,7 +43,7 @@ public class DbFiller {
     }
 
     private static ArrayList<JSONObject> apiCallResultsWith(String keyword) throws IOException {
-        String url = "https://api.edamam.com/search?q="+keyword+"&app_id="+app_id+"&app_key="+app_key+"&from=0&to=100";
+        String url = "https://api.edamam.com/search?q="+keyword+"&app_id="+app_id+"&app_key="+app_key+"&from=14&to=26";
         String response = responseFromGet( url );
         if( response.equals("not found") ) return new ArrayList<>();
         JSONObject response_json = new ObjectMapper().readValue(response, JSONObject.class);
@@ -101,7 +99,7 @@ public class DbFiller {
     private static Set getSteps(String recipe){
 
         HashSet tasks = new HashSet();
-        Integer step_number = 7+ generateRandomBetween(1,9);
+        Integer step_number = 3+ generateRandomBetween(1,9);
 
         for(int i = 1; i<= step_number; i++){
             String name = "Task number "+i;

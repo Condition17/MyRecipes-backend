@@ -42,7 +42,7 @@ public class RecipesController {
         return (recipe != null) ? ResponseEntity.status(HttpStatus.OK).body(recipe) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new JSONObject());
     }
 
-    @RequestMapping("/api/v1/preview/{uid}")
+    @RequestMapping("/api/v1/previews/{uid}")
     public ResponseEntity<?> preview(@PathVariable("uid")	String uid) {
         JSONObject recipe = this.recipeService.getRecipePreview(uid);
         return (recipe != null) ? ResponseEntity.status(HttpStatus.OK).body(recipe) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new JSONObject());

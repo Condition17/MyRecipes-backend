@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-07.12:40:02.204</IntrospectionTimestamp>
-      <IntrospectionStateNumber>8621</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-07.22:22:01.783</IntrospectionTimestamp>
+      <IntrospectionStateNumber>8674</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -130,7 +130,7 @@
     <column id="27" parent="11" name="recipe_id">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>7535</StateNumber>
+      <StateNumber>8674</StateNumber>
     </column>
     <index id="28" parent="11" name="images_pkey">
       <ObjectId>18615</ObjectId>
