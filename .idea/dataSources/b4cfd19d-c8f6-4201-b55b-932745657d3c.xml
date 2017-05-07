@@ -24,8 +24,8 @@
     </schema>
     <schema id="8" parent="2" name="public">
       <ObjectId>6206775</ObjectId>
-      <IntrospectionTimestamp>2017-05-06.19:48:38.608</IntrospectionTimestamp>
-      <IntrospectionStateNumber>15973696</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-07.21:41:25.328</IntrospectionTimestamp>
+      <IntrospectionStateNumber>16304469</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -58,11 +58,11 @@
     </sequence>
     <table id="14" parent="8" name="images">
       <ObjectId>6206789</ObjectId>
-      <StateNumber>15973696</StateNumber>
+      <StateNumber>16304110</StateNumber>
     </table>
     <table id="15" parent="8" name="ingredients">
       <ObjectId>6206794</ObjectId>
-      <StateNumber>15973694</StateNumber>
+      <StateNumber>16006978</StateNumber>
     </table>
     <table id="16" parent="8" name="recipes">
       <ObjectId>6206802</ObjectId>
@@ -142,8 +142,9 @@
     </column>
     <column id="29" parent="14" name="url">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-      <StateNumber>15973665</StateNumber>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>16304112</StateNumber>
     </column>
     <column id="30" parent="14" name="recipe_id">
       <Position>3</Position>
@@ -180,13 +181,14 @@
     </column>
     <column id="35" parent="15" name="name">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-      <StateNumber>15973666</StateNumber>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>16304242</StateNumber>
     </column>
     <column id="36" parent="15" name="quantity">
       <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>15973666</StateNumber>
+      <DataType>double precision|0</DataType>
+      <StateNumber>16006978</StateNumber>
     </column>
     <column id="37" parent="15" name="unit">
       <Position>4</Position>
@@ -228,7 +230,8 @@
     <column id="43" parent="16" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>15973667</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>16005829</StateNumber>
     </column>
     <column id="44" parent="16" name="difficulty">
       <Position>3</Position>
@@ -237,8 +240,9 @@
     </column>
     <column id="45" parent="16" name="description">
       <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
-      <StateNumber>15973667</StateNumber>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>16304368</StateNumber>
     </column>
     <column id="46" parent="16" name="duration">
       <Position>5</Position>
@@ -247,8 +251,8 @@
     </column>
     <column id="47" parent="16" name="icon_image">
       <Position>6</Position>
-      <DataType>varchar(255)|0</DataType>
-      <StateNumber>15973667</StateNumber>
+      <DataType>text|0</DataType>
+      <StateNumber>16304375</StateNumber>
     </column>
     <column id="48" parent="16" name="uuid">
       <Position>7</Position>
@@ -268,7 +272,7 @@
       <Unique>1</Unique>
     </index>
     <index id="51" parent="16" name="recipes_name_index">
-      <ObjectId>6206810</ObjectId>
+      <ObjectId>6214752</ObjectId>
       <ColNames>name</ColNames>
     </index>
     <key id="52" parent="16" name="recipes_pkey">
@@ -291,8 +295,8 @@
     </column>
     <column id="55" parent="17" name="description">
       <Position>3</Position>
-      <DataType>varchar(255)|0</DataType>
-      <StateNumber>15973674</StateNumber>
+      <DataType>text|0</DataType>
+      <StateNumber>16304469</StateNumber>
     </column>
     <column id="56" parent="17" name="recipe_id">
       <Position>4</Position>

@@ -3,22 +3,23 @@ package api.v1.Dao;
 import api.v1.Models.Image;
 import api.v1.Models.Ingredient;
 import api.v1.Models.Recipe;
-import com.sun.corba.se.spi.ior.ObjectKey;
-import com.sun.org.apache.regexp.internal.RE;
 import net.minidev.json.JSONObject;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.ParameterExpression;
-import javax.persistence.criteria.Root;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+@Transactional
 public class RecipeDAOImpl implements RecipeDAO{
+    @PersistenceContext
+    private EntityManager entityManager;
 
     private SessionFactory sessionFactory;
     {
@@ -36,6 +37,7 @@ public class RecipeDAOImpl implements RecipeDAO{
         List<Object[]> recipes = session.createQuery("select name, difficulty, duration, icon_image, uuid from Recipe ")
                 .setFirstResult(initial_row)
                 .setMaxResults(rows).list();
+        session.close();
       return showable(recipes);
     }
 
@@ -45,8 +47,9 @@ public class RecipeDAOImpl implements RecipeDAO{
         Session session = this.sessionFactory.openSession();
         List<Recipe> list = session.createQuery(" from Recipe R where R.uuid = :uid")
                             .setParameter("uid",uid).setMaxResults(1).list();
-        return list.size() > 0 ? jsonify(list.get(0)) : null;
-
+        JSONObject recipe = list.size() > 0 ? jsonify(list.get(0)) : null;
+        session.close();
+        return recipe;
     }
 
     @Override
@@ -55,24 +58,53 @@ public class RecipeDAOImpl implements RecipeDAO{
         Session session = this.sessionFactory.openSession();
         List<Recipe> list = session.createQuery(" from Recipe R where R.uuid = :uid")
                 .setParameter("uid",uid).setMaxResults(1).list();
-        return list.size() > 0 ? preview(list.get(0)) : null;
 
+        JSONObject preview = list.size() > 0 ? preview(list.get(0)) : null;
+        session.close();
+        return preview;
     }
 
     @Override
-    public  List<JSONObject> searchRecipesByKeyword( String keyword, Integer initial_row, Integer rows){
+    public  List<JSONObject> searchRecipesByKeyword( String sentence, Integer initial_row, Integer rows){
         Session session = this.sessionFactory.openSession();
-        List<Object[]> recipes =
-                session.createQuery("select name, difficulty, duration, icon_image, uuid from Recipe " +
-                "where lower(trim(name)) like(:startKeyword) or " +
-                "lower(trim(name)) like (:containedKeyword) or " +
-                "lower(trim(name)) like (:finalKeyword)")
-                .setParameter("startKeyword", (keyword+'%'))
-                .setParameter("containedKeyword", ('%' + keyword + '%') )
-                .setParameter("finalKeyword", ('%'+keyword) )
+
+        List<Object[]> recipes = session.createQuery(
+                "select distinct name, difficulty, duration, icon_image, uuid from Recipe "+
+                "where fts('english',lower(trim(name)), :sentence) = true")
+                .setParameter("sentence",sentence.trim().toLowerCase())
                 .setFirstResult(initial_row)
                 .setMaxResults(rows).list();
-        return showable(recipes);
+
+        List<JSONObject> results = showable(recipes);
+        session.close();
+        return results;
+    }
+
+    @Override
+    public Integer addRecipe(Recipe recipe, Set images, Set ingredients, Set steps){
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
+        Integer recipeID = null;
+
+        try{
+
+            tx = session.beginTransaction();
+            recipe.setImages(images);
+            recipe.setIngredients(ingredients);
+            recipe.setSteps(steps);
+            recipeID = (Integer) session.save(recipe);
+
+            tx.commit();
+        }catch (HibernateException e) {
+
+            if (tx!=null) tx.rollback();
+            e.printStackTrace();
+
+        }finally {
+            session.close();
+        }
+
+        return recipeID;
     }
 
     private JSONObject preview( Recipe r){
@@ -81,7 +113,7 @@ public class RecipeDAOImpl implements RecipeDAO{
         preview.appendField("difficulty", r.getDifficulty());
         preview.appendField("duration", r.getDuration());
         preview.appendField("icon_image", r.getIcon_image());
-        preview.appendField("uid", r.getIcon_image());
+        preview.appendField("uid", r.getUuid());
         return preview;
     }
 
@@ -100,6 +132,7 @@ public class RecipeDAOImpl implements RecipeDAO{
         recipe.appendField("name", r.getName());
         recipe.appendField("images", imagesOf(r));
         recipe.appendField("difficulty", r.getDifficulty());
+        recipe.appendField("description", r.getDescription());
         recipe.appendField("duration", r.getDuration());
         recipe.appendField("icon_image", r.getIcon_image());
         recipe.appendField("ingredients", ingredientsOf(r) );

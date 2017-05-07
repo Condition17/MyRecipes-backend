@@ -29,7 +29,7 @@
         <property name="name" column="name" type="string"/>
         <property name="difficulty" column="difficulty" type="string"/>
         <property name="description" column="description" type="string"/>
-        <property name="duration" column="duration" type="integer"/>
+        <property name="duration" column="duration" type="int"/>
         <property name="icon_image" column="icon_image" type="string"/>
         <property name="uuid" column="uuid" type="string"/>
     </class>

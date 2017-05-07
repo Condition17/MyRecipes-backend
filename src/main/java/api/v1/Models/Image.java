@@ -5,10 +5,15 @@ package api.v1.Models;
  */
 public class Image {
 
-    private long id;
+    private int id;
     private String url;
 
-    public long getId() {
+    public Image(){}
+    public Image(String url) {
+        this.url = url;
+    }
+
+    public int getId() {
         return id;
     }
 
@@ -16,7 +21,7 @@ public class Image {
         return url;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -37,7 +42,7 @@ public class Image {
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = id ^ (id >>> 32);
         result = 31 * result + (url != null ? url.hashCode() : 0);
         return result;
     }

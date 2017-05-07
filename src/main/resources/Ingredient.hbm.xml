@@ -12,7 +12,7 @@
         </id>
 
         <property name="name" column="name" type="string"/>
-        <property name="quantity" column="quantity" type="int"/>
+        <property name="quantity" column="quantity" type="java.lang.Double"/>
         <property name="unit" column="unit" type="string"/>
     </class>
 </hibernate-mapping>

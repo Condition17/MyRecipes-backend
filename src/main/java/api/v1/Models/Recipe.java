@@ -1,22 +1,28 @@
 package api.v1.Models;
 
+import org.hibernate.search.annotations.Indexed;
+
 import javax.persistence.*;
 import java.util.Set;
 
+@Entity
+@Indexed
+
 public class Recipe {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column(name="name")
     private String name;
     private String difficulty;
     private String description;
-    private long duration;
+    private int duration;
     private String icon_image;
     private String uuid;
     private Set images;
     private Set steps;
     private Set ingredients;
 
-    public Recipe(String name, String difficulty, String description, long duration, String icon_image) {
+    public Recipe(String name, String difficulty, String description, int duration, String icon_image) {
         this.name = name;
         this.difficulty = difficulty;
         this.description = description;
@@ -39,7 +45,7 @@ public class Recipe {
         this.id = id;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
@@ -67,11 +73,11 @@ public class Recipe {
         this.description = description;
     }
 
-    public long getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(long duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 
@@ -128,7 +134,7 @@ public class Recipe {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (difficulty != null ? difficulty.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (int) (duration ^ (duration >>> 32));
+        result = 31 * result + (duration ^ (duration >>> 32));
         result = 31 * result + (icon_image != null ? icon_image.hashCode() : 0);
         return result;
     }

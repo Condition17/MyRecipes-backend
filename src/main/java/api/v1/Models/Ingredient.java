@@ -6,12 +6,12 @@ package api.v1.Models;
 public class Ingredient {
     private int id;
     private String name;
-    private int quantity;
+    private Double quantity;
     private String unit;
 
     public Ingredient(){}
 
-    public Ingredient(String name, int quantity, String unit) {
+    public Ingredient(String name, Double quantity, String unit) {
         this.name = name;
         this.quantity = quantity;
         this.unit = unit;
@@ -33,11 +33,11 @@ public class Ingredient {
         this.name = name;
     }
 
-    public int getQuantity() {
+    public Double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
 
@@ -66,7 +66,7 @@ public class Ingredient {
     public int hashCode() {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + quantity;
+        result = 31 * result + (quantity != null ? quantity.hashCode() : 0);
         result = 31 * result + (unit != null ? unit.hashCode() : 0);
         return result;
     }
