@@ -7,18 +7,11 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <!--<property name="hibernate.connection.username">cristi</property>-->
-        <!--<property name="hibernate.connection.password">cristi</property>-->
-        <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/recipesdb</property>-->
         <property name="hibernate.dialect">api.v1.AddOns.CustomPostgresDialect</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://ec2-23-23-237-68.compute-1.amazonaws.com:5432/d9pihm1jqojpq8?sslmode=require&amp;user=msvqddtcfyvhgb&amp;password=1ddf0fb535a0c0c270aec9772eae35e8fed415e90a6ed2db27922db20c859cc1</property>
-
+        <property name="hibernate.connection.url">jdbc:postgresql://172.17.0.2:5432/recipes?user=root&amp;password=rootpass</property>
         <property name="connection_pool_size">1</property>
         <property name="show_sql">true</property>
-        <mapping resource="Recipe.hbm.xml"></mapping>
         <mapping resource="Image.hbm.xml"></mapping>
-        <mapping resource="Step.hbm.xml"></mapping>
         <mapping resource="Ingredient.hbm.xml"></mapping>
-
     </session-factory>
 </hibernate-configuration>

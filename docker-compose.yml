@@ -1,6 +1,10 @@
 version: '2'
 services:
   web:
+    container_name: myrecipe_server
     build: "."
     ports:
       - "8080:8080"
+    external_links:
+      - myrecipes_pg
+    network_mode: bridge

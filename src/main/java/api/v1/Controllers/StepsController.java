@@ -18,7 +18,7 @@ public class StepsController {
 
     @RequestMapping("/api/v1/steps/{recipe_uid}")
     public ResponseEntity<?> show(@PathVariable("recipe_uid") String uid) {
-        List<JSONObject> steps= this.stepsService.getStepByUuid(uid);
+        List<JSONObject> steps= this.stepsService.getStepsByUuid(uid);
         JSONObject response = new JSONObject();
         if ( steps == null ) {
             response.appendField("steps", new ArrayList<>());

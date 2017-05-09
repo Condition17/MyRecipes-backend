@@ -17,5 +17,17 @@
         <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="recipesdb@0.0.0.0" uuid="b3e6cd27-fcfe-48e3-a6ce-9f8d4511b0e8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://0.0.0.0:5433/recipesdb</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="docker" uuid="d7cb3f50-3138-4ad7-970c-d70431fd64ce">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.17.0.2:5432/recipes</jdbc-url>
+    </data-source>
   </component>
 </project>

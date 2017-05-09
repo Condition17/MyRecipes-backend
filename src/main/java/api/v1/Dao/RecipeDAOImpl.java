@@ -18,13 +18,15 @@ import java.util.Set;
 
 @Transactional
 public class RecipeDAOImpl implements RecipeDAO{
-    @PersistenceContext
-    private EntityManager entityManager;
-
+    private String hibernateConfig = "hibernate.cfg.xml";
+    private Configuration configuration = new Configuration().configure(hibernateConfig);
     private SessionFactory sessionFactory;
+    private String[] resources = {"Recipe.hbm.xml","Image.hbm.xml","Step.hbm.xml","Ingredient.hbm.xml"};
+
     {
         try{
-            sessionFactory = new Configuration().configure().buildSessionFactory();
+            sessionFactory = addResources(configuration,resources).buildSessionFactory();
+
         }catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
             throw new ExceptionInInitializerError(ex);
@@ -38,7 +40,7 @@ public class RecipeDAOImpl implements RecipeDAO{
                 .setFirstResult(initial_row)
                 .setMaxResults(rows).list();
         session.close();
-      return showable(recipes);
+        return showable(recipes);
     }
 
     @Override
@@ -46,7 +48,7 @@ public class RecipeDAOImpl implements RecipeDAO{
 
         Session session = this.sessionFactory.openSession();
         List<Recipe> list = session.createQuery(" from Recipe R where R.uuid = :uid")
-                            .setParameter("uid",uid).setMaxResults(1).list();
+                .setParameter("uid",uid).setMaxResults(1).list();
         JSONObject recipe = list.size() > 0 ? jsonify(list.get(0)) : null;
         session.close();
         return recipe;
@@ -70,7 +72,7 @@ public class RecipeDAOImpl implements RecipeDAO{
 
         List<Object[]> recipes = session.createQuery(
                 "select distinct name, difficulty, duration, icon_image, uuid from Recipe "+
-                "where fts('english',lower(trim(name)), :sentence) = true")
+                        "where fts('english',lower(trim(name)), :sentence) = true")
                 .setParameter("sentence",sentence.trim().toLowerCase())
                 .setFirstResult(initial_row)
                 .setMaxResults(rows).list();
@@ -105,6 +107,13 @@ public class RecipeDAOImpl implements RecipeDAO{
         }
 
         return recipeID;
+    }
+
+    private Configuration addResources(Configuration configuration, String[] resources){
+        for( String resource : resources ){
+            configuration = configuration.addResource(resource);
+        }
+        return configuration;
     }
 
     private JSONObject preview( Recipe r){

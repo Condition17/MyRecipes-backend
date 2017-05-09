@@ -8,5 +8,5 @@ import java.util.List;
  * Created by cristi on 5/5/17.
  */
 public interface StepsService {
-    List<JSONObject> getStepByUuid(String uuid);
+    List<JSONObject> getStepsByUuid(String uuid);
 }

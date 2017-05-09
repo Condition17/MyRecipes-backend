@@ -43,7 +43,7 @@ public class DbFiller {
     }
 
     private static ArrayList<JSONObject> apiCallResultsWith(String keyword) throws IOException {
-        String url = "https://api.edamam.com/search?q="+keyword+"&app_id="+app_id+"&app_key="+app_key+"&from=14&to=26";
+        String url = "https://api.edamam.com/search?q="+keyword+"&app_id="+app_id+"&app_key="+app_key+"&from=0&to=13";
         String response = responseFromGet( url );
         if( response.equals("not found") ) return new ArrayList<>();
         JSONObject response_json = new ObjectMapper().readValue(response, JSONObject.class);

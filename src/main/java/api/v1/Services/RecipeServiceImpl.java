@@ -31,8 +31,8 @@ public class RecipeServiceImpl implements RecipeService {
         sentence = sentence.trim();
         Set<JSONObject> results = new HashSet<>();
 
-            List<JSONObject> recipes = this.recipeDAO.searchRecipesByKeyword(sentence, initial_row, rows);
-            for( JSONObject recipe : recipes) results.add(recipe);
+        List<JSONObject> recipes = this.recipeDAO.searchRecipesByKeyword(sentence, initial_row, rows);
+        for( JSONObject recipe : recipes) results.add(recipe);
         return results;
     }
 
