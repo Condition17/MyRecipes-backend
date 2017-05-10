@@ -58,6 +58,12 @@ You can see the database(instance) ip address running the following command:
 ```
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myrecipes_pg
 ```
+* **Setup database structure**
+
+```
+docker exec myrecipes_pg /bin/sh -c 'psql -U {your db user} -d recipes </generatedb.sql'
+```
+
 * **Package application**
 
 ```
