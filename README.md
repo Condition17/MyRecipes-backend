@@ -21,13 +21,13 @@ This creates a new volume inside the myrecipes_db container of postgres:9.4 imag
 * **Create container with database instance**
 
 ```
-docker run --volumes-from myrecipes_db --name myrecipes_pg -e POSTGRES_USER=${your db user } -e POSTGRES_PASSWORD=${your db user password} -d -P postgres:9.4
+docker run --volumes-from myrecipes_db --name myrecipes_pg -e POSTGRES_USER={your db user } -e POSTGRES_PASSWORD={your db user password} -d -P postgres:9.4
 
 ```
 * **Connect to database container and create a database**
 
 ```
-docker run -it --link myrecipes_pg:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U ${your db user} recipes'
+docker run -it --link mr_pg:postgres --rm postgres sh -c 'exec createdb -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U {your db user} recipes'
 ```
 
 * **Create hibernate.cfg.xml file**
