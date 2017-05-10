@@ -27,10 +27,9 @@ docker run --volumes-from myrecipes_db --name myrecipes_pg -e POSTGRES_USER=${yo
 * **Connect to database container and create a database**
 
 ```
-docker run -it --link myrecipes_pg:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U ${your db user}'
-
-create database recipes;
+docker run -it --link myrecipes_pg:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U ${your db user} recipes'
 ```
+
 * **Create hibernate.cfg.xml file**
 Create "hibernate.cfg.xml" file in "src/main/respirces" directory. File content should have the following structure:
 
