@@ -60,7 +60,8 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 * **Setup database structure**
 
 ```
-docker exec myrecipes_pg /bin/sh -c 'psql -U {your db user} -d recipes </generatedb.sql'
+docker cp ./generatedb.sql mr_pg:generatedb.sql
+docker exec myrecipes_pg psql -U {your db user} -d recipes -f generatedb.sql
 ```
 
 * **Package application**
