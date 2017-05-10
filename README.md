@@ -75,3 +75,6 @@ mvn package
 docker-compose up
 ```
 After starting, the aplication this should be available on localhost, port 8080.
+
+* **Optional**: Run src/main/java/api/v1/Utils/DbFiller main class to populate the newly created database.
+
