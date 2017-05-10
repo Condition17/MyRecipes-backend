@@ -3,7 +3,9 @@ Spring boot api for an iOS app for cooking.
 
 ## Setup
 
-* Install docker
+* **Install docker**
+
+* **Install maven**
 
 * **Download docker image with Postgres database server**
 ```
@@ -52,3 +54,18 @@ Create "hibernate.cfg.xml" file in "src/main/respirces" directory. File content 
 </hibernate-configuration>
 
 ```
+You can see the database(instance) ip address running the following command:
+```
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myrecipes_pg
+```
+* **Package application**
+
+```
+mvn package
+```
+
+* **Run server**
+```
+docker-compose up
+```
+After starting the aplication this should be available on localhost, port 8080.
