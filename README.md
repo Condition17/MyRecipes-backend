@@ -68,4 +68,4 @@ mvn package
 ```
 docker-compose up
 ```
-After starting the aplication this should be available on localhost, port 8080.
+After starting, the aplication this should be available on localhost, port 8080.
