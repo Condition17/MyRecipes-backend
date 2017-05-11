@@ -54,7 +54,7 @@ public class RecipesController {
     @RequestMapping(value = "/api/v1/recipes", method = RequestMethod.POST)
     public ResponseEntity<?> search( @RequestBody Map<String,Object> req ){
 
-        Integer page_number, initial_row;
+        Integer page_number, initial_row = 0;
         JSONObject res = new JSONObject();
         res.appendField("recipes", new ArrayList<>());
 
@@ -63,7 +63,7 @@ public class RecipesController {
             initial_row = ( page_number - 1) * page_size;
             if ( initial_row < 0 ) throw new Exception();
         }catch( Exception e){
-            return ResponseEntity.status(HttpStatus.OK).body(res);
+            ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
 
         String search_sentence = (String) req.get("keywords");

@@ -22,8 +22,7 @@ public class StepsController {
         List<JSONObject> steps= this.stepsService.getStepsByUuid(uid);
         JSONObject response = new JSONObject();
 
-        if ( steps == null ) {
-            response.appendField("steps", new ArrayList<>());
+        if ( steps.size() == 0 ) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
 

@@ -24,7 +24,7 @@ public class StepsServiceImpl implements StepsService {
 
     private List<JSONObject> jsonify(List<Step> steps){
         List<JSONObject> jsonSteps = new ArrayList<>();
-        for( Step step : steps) jsonSteps.add(jsonify(step));
+        if( steps != null ) for( Step step : steps) jsonSteps.add(jsonify(step));
         return jsonSteps;
     }
 
