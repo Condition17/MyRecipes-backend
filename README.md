@@ -27,7 +27,7 @@ docker run --volumes-from myrecipes_db --name myrecipes_pg -e POSTGRES_USER={you
 * **Connect to database container and create a database**
 
 ```
-docker run -it --link mr_pg:postgres --rm postgres sh -c 'exec createdb -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U {your db user} recipes'
+docker run -it --link myrecipes_pg:postgres --rm postgres sh -c 'exec createdb -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U {your db user} recipes'
 ```
 
 * **Create hibernate.cfg.xml file**
@@ -60,7 +60,7 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 * **Setup database structure**
 
 ```
-docker cp ./generatedb.sql mr_pg:generatedb.sql
+docker cp ./generatedb.sql myrecipes_pg:generatedb.sql
 docker exec myrecipes_pg psql -U {your db user} -d recipes -f generatedb.sql
 ```
 
