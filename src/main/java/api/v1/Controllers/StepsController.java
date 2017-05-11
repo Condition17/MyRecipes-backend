@@ -18,8 +18,10 @@ public class StepsController {
 
     @RequestMapping("/api/v1/steps/{recipe_uid}")
     public ResponseEntity<?> show(@PathVariable("recipe_uid") String uid) {
+
         List<JSONObject> steps= this.stepsService.getStepsByUuid(uid);
         JSONObject response = new JSONObject();
+
         if ( steps == null ) {
             response.appendField("steps", new ArrayList<>());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
@@ -27,6 +29,7 @@ public class StepsController {
 
         response.appendField("steps",steps);
         return ResponseEntity.status(HttpStatus.OK).body(response);
+
     }
 
 }

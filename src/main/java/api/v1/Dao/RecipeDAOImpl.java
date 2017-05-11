@@ -34,7 +34,8 @@ public class RecipeDAOImpl implements RecipeDAO{
     @Override
     public List<JSONObject> listRecipes(Integer initial_row, Integer rows) {
         Session session = this.sessionFactory.openSession();
-        List<Object[]> recipes = session.createQuery("select name, difficulty, duration, icon_image, uuid from Recipe ")
+        List<Object[]> recipes = session.
+                createQuery("select name, difficulty, duration, icon_image, uuid from Recipe ")
                 .setFirstResult(initial_row)
                 .setMaxResults(rows).list();
         session.close();

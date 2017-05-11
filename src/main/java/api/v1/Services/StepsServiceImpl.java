@@ -4,13 +4,9 @@ import api.v1.Dao.StepsDAO;
 import api.v1.Dao.StepsDAOImpl;
 import api.v1.Models.Step;
 import net.minidev.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by cristi on 5/5/17.
- */
 public class StepsServiceImpl implements StepsService {
     private StepsDAO stepsDAO = new StepsDAOImpl();
 
