@@ -29,5 +29,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://172.17.0.2:5432/recipes</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="test" uuid="7f78554b-d92c-458d-bc04-d55833d6aba1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.17.0.2:5432/recipes</jdbc-url>
+    </data-source>
   </component>
 </project>

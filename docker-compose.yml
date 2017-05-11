@@ -6,5 +6,5 @@ services:
     ports:
       - "8080:8080"
     external_links:
-      - myrecipes_pg
+      - mr_pg
     network_mode: bridge
