@@ -52,7 +52,7 @@ public class RecipesControllerTest {
 
         ResponseEntity result = recipesControllerTest.index(1);
 
-        assertEquals(result.getStatusCode(), HttpStatus.OK);
+        assertEquals(HttpStatus.OK, result.getStatusCode());
 
         assertEquals(true,result.hasBody());
 
@@ -66,6 +66,7 @@ public class RecipesControllerTest {
         List<JSONObject> recipesList =  (List<JSONObject>) body.get("recipes");
 
         assertEquals(5, recipesList.size());
+
         JSONRecipeValidator recipeValidator = new JSONRecipeValidator();
 
         try {
@@ -90,7 +91,7 @@ public class RecipesControllerTest {
         RecipesController recipesControllerTest = new RecipesController();
 
         ResponseEntity resultNegativeInt = recipesControllerTest.index(-1);
-        assertEquals(resultNegativeInt.getStatusCode(), HttpStatus.BAD_REQUEST);
+        assertEquals(HttpStatus.BAD_REQUEST, resultNegativeInt.getStatusCode());
 
     }
 }
