@@ -63,12 +63,13 @@ public class RecipesControllerTest {
 
         assertEquals(true,body.containsKey("recipes"));
 
-        List<JSONObject> recipesList = null;
+        List<JSONObject> recipesList =  (List<JSONObject>) body.get("recipes");
 
+        assertEquals(5, recipesList.size());
         JSONRecipeValidator recipeValidator = new JSONRecipeValidator();
 
         try {
-            for (JSONObject recipe : recipesList = (List<JSONObject>) body.get("recipes")) {
+            for (JSONObject recipe : recipesList) {
 
                 assertEquals(true,recipeValidator.isValid(recipe));
             }
