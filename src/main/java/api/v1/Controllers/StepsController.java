@@ -8,27 +8,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 public class StepsController {
-    private StepsService stepsService = new StepsServiceImpl();
+
+    private final StepsService stepsService = new StepsServiceImpl();
 
     @RequestMapping("/api/v1/steps/{recipe_uid}")
     public ResponseEntity<?> show(@PathVariable("recipe_uid") String uid) {
 
-        List<JSONObject> steps= this.stepsService.getStepsByUuid(uid);
-        JSONObject response = new JSONObject();
+        List<JSONObject> steps = this.stepsService.getStepsByUuid(uid);
+        JSONObject resBody = new JSONObject().appendField("steps", new ArrayList<>());
 
-        if ( steps.size() == 0 ) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
-        }
+        resBody.put("steps",steps);
 
-        response.appendField("steps",steps);
-        return ResponseEntity.status(HttpStatus.OK).body(response);
-
+        return new ResponseEntity<>(resBody, steps.size() == 0 ? HttpStatus.NOT_FOUND : HttpStatus.OK );
     }
 
 }
