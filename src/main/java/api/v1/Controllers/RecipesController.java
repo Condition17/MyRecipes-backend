@@ -59,18 +59,19 @@ public class RecipesController {
 
         Integer pageNumber, initialRow;
         JSONObject resBody = new JSONObject().appendField("recipes", new ArrayList<>());
+        String searchSentence;
 
         try{
             pageNumber = (Integer) reqBody.get("page");
             initialRow = ( pageNumber - 1) * pageSize;
-
+            searchSentence = (String) reqBody.get("keywords");
             if ( initialRow < 0 ) throw new Exception();
 
         }catch( Exception e){
-            return new ResponseEntity<>(resBody, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(resBody, HttpStatus.BAD_REQUEST);
         }
 
-        String searchSentence = (String) reqBody.get("keywords");
+
         Set<JSONObject> results = this.recipeService.searchRecipesBySentence( searchSentence, initialRow, pageSize);
         resBody.put("recipes", results);
 
