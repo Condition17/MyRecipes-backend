@@ -12,3 +12,5 @@
 .idea/inspectionProfiles/profiles_settings.xml
 target/*
 src/main/resources/hibernate.cfg.xml
+*.idea/*
+*.iml
