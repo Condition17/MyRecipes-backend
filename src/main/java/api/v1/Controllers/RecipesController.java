@@ -6,10 +6,8 @@ import net.minidev.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
+import java.util.*;
 
 @RestController
 public class RecipesController {
@@ -58,10 +56,12 @@ public class RecipesController {
     public ResponseEntity<?> search( @RequestBody Map<String,Object> reqBody ){
 
         Integer pageNumber, initialRow;
-        JSONObject resBody = new JSONObject().appendField("recipes", new ArrayList<>());
+        JSONObject resBody = new JSONObject().appendField("recipes", new HashSet<>());
         String searchSentence;
 
+
         try{
+            validateReqFields(reqBody);
             pageNumber = (Integer) reqBody.get("page");
             initialRow = ( pageNumber - 1) * pageSize;
             searchSentence = (String) reqBody.get("keywords");
@@ -71,12 +71,16 @@ public class RecipesController {
             return new ResponseEntity<>(resBody, HttpStatus.BAD_REQUEST);
         }
 
-
         Set<JSONObject> results = this.recipeService.searchRecipesBySentence( searchSentence, initialRow, pageSize);
         resBody.put("recipes", results);
 
         return new ResponseEntity<>(resBody, results.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
 
+    }
+
+    private void validateReqFields(Map<String, Object> reqBody) throws Exception {
+            if( reqBody.size() != 2 || !(reqBody.containsKey("page") && reqBody.containsKey("keywords")) )
+                throw new Exception();
     }
 }
 
