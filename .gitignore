@@ -1,15 +1,4 @@
-
-.idea/dataSources/b3e6cd27-fcfe-48e3-a6ce-9f8d4511b0e8/_src_/
-.idea/dataSources/b3e6cd27-fcfe-48e3-a6ce-9f8d4511b0e8/_staging_/
-.idea/dataSources/b4cfd19d-c8f6-4201-b55b-932745657d3c/_src_/
-.idea/dataSources/b4cfd19d-c8f6-4201-b55b-932745657d3c/_staging_/
-.idea/dataSources/d7cb3f50-3138-4ad7-970c-d70431fd64ce/_src_/
-.idea/dataSources/d7cb3f50-3138-4ad7-970c-d70431fd64ce/_staging_/
-.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_src_/
-.idea/dataSources/ec548a9d-9b5f-478c-a88b-2574b8c0bf1e/_staging_/
-.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_src_/
-.idea/dataSources/ffc16142-d20b-40e7-a54b-4c1c8a4d6222/_staging_/
-.idea/inspectionProfiles/profiles_settings.xml
 target/*
 src/main/resources/hibernate.cfg.xml
 .idea/*
+
