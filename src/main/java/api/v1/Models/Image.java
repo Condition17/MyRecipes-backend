@@ -1,8 +1,5 @@
 package api.v1.Models;
 
-/**
- * Created by cristi on 5/4/17.
- */
 public class Image {
 
     private int id;

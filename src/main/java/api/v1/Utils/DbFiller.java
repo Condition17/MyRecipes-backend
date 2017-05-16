@@ -16,19 +16,23 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
 
-/**
- * Created by cristi on 5/7/17.
- */
 public class DbFiller {
 
     static final String app_id = "347a3693";
     static final String app_key = "51e7b7d3123ab9fe568d44adf966e51b";
-    static final String mock_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore " +
-            "magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex " +
-            "ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+    static final String mock_text =
+            "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+            "elit, sed do eiusmod tempor incididunt ut labore et dolore " +
+            "magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation " +
+            "ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute " +
+            "irure dolor in reprehenderit in voluptate velit esse cillum dolore" +
+            " eu fugiat nulla pariatur.";
 
-    static final String[] keywords = {"chicken","ham","lamb","soup","pizza","hamburger","porc","egg","salad","cocktail","italian", "greek", "american", "chocolate","desert","cherry","gordon","indian",
-            "pineapple", "pie", "turkey", "fish", "tomato", "squid", "herbs", "spaghetti", "baked", "fried"};
+    static final String[] keywords = {"chicken","ham","lamb","soup","pizza","hamburger",
+            "porc","egg","salad","cocktail","italian", "greek", "american", "chocolate",
+            "desert","cherry","gordon","indian", "pineapple", "pie", "turkey", "fish",
+            "tomato", "squid", "herbs", "spaghetti", "baked", "fried"};
+
     static final RecipeService recipeService = new RecipeServiceImpl();
     public static void main(String[] args) throws IOException {
 
@@ -121,11 +125,10 @@ public class DbFiller {
         return result;
     }
     private static Set getImages(String recipe, String icon_image){
-        //here should be another api call for getting images associated with recipe
-        //this thing MAYBE will be developed
-        //..but I don't think so
+
         HashSet images = new HashSet();
         images.add(new Image(icon_image));
         return images;
+
     }
 }

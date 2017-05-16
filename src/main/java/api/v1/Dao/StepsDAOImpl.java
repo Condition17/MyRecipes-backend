@@ -6,14 +6,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import java.util.List;
 
-/**
- * Created by cristi on 5/5/17.
- */
 public class StepsDAOImpl implements StepsDAO {
-    private String[] resources = { "Step.hbm.xml", "Recipe.hbm.xml" };
-    private String hibernateConfig = "hibernate.cfg.xml";
-    private Configuration configuration = new Configuration().configure(hibernateConfig);
-    private SessionFactory sessionFactory;
+
+    private final String[] resources = { "Step.hbm.xml", "Recipe.hbm.xml" };
+    private final String hibernateConfig = "hibernate.cfg.xml";
+    private final Configuration configuration = new Configuration().configure(hibernateConfig);
+    private final SessionFactory sessionFactory;
 
     {
         try{
@@ -27,16 +25,22 @@ public class StepsDAOImpl implements StepsDAO {
 
     @Override
     public List<Step> getStepsByUuid(String uid){
+
         Session session = this.sessionFactory.openSession();
-        List<Step> list = session.createQuery(" select steps from Recipe R where R.uuid = :uid")
+
+        List steps = session
+                .createQuery(" select steps from Recipe R where R.uuid = :uid")
                 .setParameter("uid",uid).list();
-        return list.size() > 0 ? list : null;
+
+        return steps.size() > 0 ? steps : null;
     }
 
     private Configuration addResources(Configuration configuration, String[] resources){
+
         for( String resource : resources ){
             configuration = configuration.addResource(resource);
         }
+
         return configuration;
     }
 

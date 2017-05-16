@@ -1,7 +1,5 @@
 package api.v1.Controllers;
 
-import api.v1.Models.Recipe;
-
 import api.v1.Services.RecipeService;
 import api.v1.Services.RecipeServiceImpl;
 import net.minidev.json.JSONObject;
@@ -9,64 +7,80 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 public class RecipesController {
-    private RecipeService recipeService = new RecipeServiceImpl();
-    private Integer page_size = 5;
+
+    private final RecipeService recipeService = new RecipeServiceImpl();
+    private final Integer pageSize = 5;
 
     @RequestMapping("/api/v1/recipes")
     public ResponseEntity<?> index(@RequestParam(value="page")Integer page_number){
 
-        JSONObject res = new JSONObject();
-        Integer initial_row = (page_number-1)*page_size;
+        List<JSONObject> recipesList;
+        JSONObject resBody = new JSONObject().appendField("recipes",new ArrayList<>());
+        final Integer initialRow = (page_number-1)*pageSize;
 
-        if( initial_row >= 0) {
-            List<JSONObject> list = this.recipeService.listRecipes(initial_row, page_size);
-            res.appendField("recipes", list);
-            return (list.size() > 0) ? ResponseEntity.status(HttpStatus.OK).body(res) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
-        }
+        if( initialRow < 0 )
+            return new ResponseEntity<>(resBody,HttpStatus.BAD_REQUEST);
 
-        res.appendField("recipes", new ArrayList<>());
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
+        recipesList = this.recipeService.listRecipes(initialRow, pageSize);
+        resBody.put("recipes", recipesList);
+
+        return new ResponseEntity<>(resBody, recipesList.size() > 0 ? HttpStatus.OK : HttpStatus.BAD_REQUEST );
 
     }
 
     @RequestMapping("/api/v1/recipes/{uid}")
     public ResponseEntity<?> show(@PathVariable("uid")	String uid) {
+
         JSONObject recipe = this.recipeService.getRecipeByUuid(uid);
-        return (recipe != null) ? ResponseEntity.status(HttpStatus.OK).body(recipe) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new JSONObject());
+
+        return  (recipe != null) ?
+                new ResponseEntity<>(recipe, HttpStatus.OK) :
+                new ResponseEntity<>(new JSONObject(), HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping("/api/v1/previews/{uid}")
     public ResponseEntity<?> preview(@PathVariable("uid")	String uid) {
+
         JSONObject recipe = this.recipeService.getRecipePreview(uid);
-        return (recipe != null) ? ResponseEntity.status(HttpStatus.OK).body(recipe) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new JSONObject());
+
+        return (recipe != null) ?
+                new ResponseEntity<>(recipe, HttpStatus.OK) :
+                new ResponseEntity<>(new JSONObject(), HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value = "/api/v1/recipes", method = RequestMethod.POST)
-    public ResponseEntity<?> search( @RequestBody Map<String,Object> req ){
-        Integer page_number = 0;
-        Integer initial_row = 0;
-        JSONObject res = new JSONObject();
-        res.appendField("recipes", new ArrayList<>());
+    public ResponseEntity<?> search( @RequestBody Map<String,Object> reqBody ){
+
+        Integer pageNumber, initialRow;
+        JSONObject resBody = new JSONObject().appendField("recipes", new HashSet<>());
+        String searchSentence;
+
 
         try{
-            page_number = (Integer) req.get("page");
-            initial_row = (page_number-1)*page_size;
-            if ( initial_row < 0 ) throw new Exception();
+            validateReqFields(reqBody);
+            pageNumber = (Integer) reqBody.get("page");
+            initialRow = ( pageNumber - 1) * pageSize;
+            searchSentence = (String) reqBody.get("keywords");
+            if ( initialRow < 0 ) throw new Exception();
+
         }catch( Exception e){
-            return ResponseEntity.status(HttpStatus.OK).body(res);
+            return new ResponseEntity<>(resBody, HttpStatus.BAD_REQUEST);
         }
 
-        String search_sentence = (String) req.get("keywords");
-        Set<JSONObject> results = this.recipeService.searchRecipesBySentence( search_sentence, initial_row, page_size);
-        res.put("recipes", results);
-        return results.size() > 0 ? ResponseEntity.status(HttpStatus.OK).body(res) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
+        Set<JSONObject> results = this.recipeService.searchRecipesBySentence( searchSentence, initialRow, pageSize);
+        resBody.put("recipes", results);
+
+        return new ResponseEntity<>(resBody, results.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
+
+    }
+
+    private void validateReqFields(Map<String, Object> reqBody) throws Exception {
+            if( reqBody.size() != 2 || !(reqBody.containsKey("page") && reqBody.containsKey("keywords")) )
+                throw new Exception();
     }
 }
 
