@@ -1,8 +1,5 @@
 package api.v1.Models;
 
-/**
- * Created by cristi on 5/5/17.
- */
 public class Ingredient {
     private int id;
     private String name;
