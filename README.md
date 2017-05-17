@@ -1,4 +1,7 @@
 # MyRecipes-backend
+
+[![Build Status](https://travis-ci.org/Condition17/MyRecipes-backend.svg?branch=master)](https://travis-ci.org/Condition17/blog)
+
 Spring boot api for an iOS app for cooking.
 
 ## Setup
