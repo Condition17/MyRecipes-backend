@@ -89,9 +89,10 @@ public class RecipesControllerTest {
     private void failRequestIndex() {
 
         ResponseEntity result = recipesControllerTest.index(-1);
-        assertEquals(result.getStatusCode(), result.getStatusCode());
-
+        assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
+        assert(result.hasBody());
         JSONObject body = (JSONObject) result.getBody();
+        assert(body.containsKey("recipes"));
         List<JSONObject> recipesList =  (List<JSONObject>) body.get("recipes");
         assertEquals(0, recipesList.size());
 
