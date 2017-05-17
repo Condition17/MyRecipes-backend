@@ -217,7 +217,7 @@ public class JSONRecipeValidator implements Validator {
         NumberValidator validator = new NumberValidator();
 
         if(!validator.isValid(quantity)){
-            System.out.print("It is for test");
+           
             return false;
         }
 
