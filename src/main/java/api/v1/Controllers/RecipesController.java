@@ -23,12 +23,12 @@ public class RecipesController {
         final Integer initialRow = (page_number-1)*pageSize;
 
         if( initialRow < 0 )
-            return new ResponseEntity<>(resBody,HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(resBody,HttpStatus.NOT_FOUND);
 
         recipesList = this.recipeService.listRecipes(initialRow, pageSize);
         resBody.put("recipes", recipesList);
 
-        return new ResponseEntity<>(resBody, recipesList.size() > 0 ? HttpStatus.OK : HttpStatus.BAD_REQUEST );
+        return new ResponseEntity<>(resBody, recipesList.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND );
 
     }
 
