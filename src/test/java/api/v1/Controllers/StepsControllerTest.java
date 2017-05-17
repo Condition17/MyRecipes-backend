@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import java.util.*;
 import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.fail;
 
 
 /**
@@ -61,7 +61,7 @@ public class StepsControllerTest {
             }
         }
         catch(Exception e){
-            System.out.println("couldn't iterate through recipes in index method");
+            fail("couldn't iterate through recipes in index method");
         }
 
     }

@@ -195,7 +195,7 @@ public class RecipesControllerTest {
                     assert (recipe.getAsString("name").toLowerCase().contains("grill"));
                 }
             } catch (Exception e) {
-                System.out.println("couldn't iterate through recipes in index method");
+               fail("couldn't iterate through recipes in index method");
             }
         page ++;
             request.put("page", page);
@@ -264,7 +264,7 @@ public class RecipesControllerTest {
             }
         }
         catch (Exception e) {
-            System.out.println("couldn't iterate through recipes in index method");
+            fail("couldn't iterate through recipes in index method");
         }
     }
 
