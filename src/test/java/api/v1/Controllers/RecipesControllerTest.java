@@ -1,4 +1,4 @@
-package api.v1.Tests;
+package api.v1.Controllers;
 
 import api.v1.Controllers.RecipesController;
 import api.v1.Utils.JSONRecipeValidator;
@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * Created by Vlad Stefan on 5/14/2017.
@@ -76,9 +77,9 @@ public class RecipesControllerTest {
             for (JSONObject recipe : recipesList) {
                 assert(recipeValidator.isValid(recipe));
             }
-        }
+         }
         catch (Exception e) {
-            System.out.println("couldn't iterate through recipes in index method");
+           fail("couldn't iterate through recipes in index method");
         }
     }
 

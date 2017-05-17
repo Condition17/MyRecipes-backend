@@ -1,4 +1,4 @@
-package api.v1.Tests;
+package api.v1.Controllers;
 
 import api.v1.Controllers.StepsController;
 import api.v1.Utils.JSONStepValidator;
