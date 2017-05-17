@@ -87,7 +87,7 @@
     </dependencies>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version>
         <docker.image.prefix>springio</docker.image.prefix>
         <main.class.path>api.v1.Controllers.Application</main.class.path>
     </properties>
@@ -96,6 +96,19 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>(whatever version is current)</version>
+                <configuration>
+                    <!-- or whatever version you use -->
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
