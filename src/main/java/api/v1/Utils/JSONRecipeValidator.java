@@ -4,7 +4,6 @@ import net.minidev.json.JSONObject;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Vlad Stefan on 5/14/2017.
