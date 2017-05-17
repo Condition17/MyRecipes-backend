@@ -63,10 +63,10 @@ public class RecipesControllerTest {
 
         ResponseEntity result = recipesControllerTest.index(1);
         assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(true,result.hasBody());
+        assert(result.hasBody());
 
         JSONObject body = (JSONObject) result.getBody();
-        assertEquals(true,body.containsKey("recipes"));
+        assert(body.containsKey("recipes"));
 
         List<JSONObject> recipesList =  (List<JSONObject>) body.get("recipes");
         assertEquals(5, recipesList.size());
@@ -74,7 +74,7 @@ public class RecipesControllerTest {
         JSONRecipeValidator recipeValidator = new JSONRecipeValidator();
         try {
             for (JSONObject recipe : recipesList) {
-                assertEquals(true, recipeValidator.isValid(recipe));
+                assert(recipeValidator.isValid(recipe));
             }
         }
         catch (Exception e) {
@@ -109,11 +109,11 @@ public class RecipesControllerTest {
 
         ResponseEntity result = recipesControllerTest.show(validUid);
         assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(true, result.hasBody());
+        assert(result.hasBody());
 
         JSONObject recipe= (JSONObject) result.getBody();
         JSONRecipeValidator validator = new JSONRecipeValidator();
-        assertEquals(true,validator.isValidFull(recipe));
+        assert(validator.isValidFull(recipe));
     }
 
     /**
@@ -126,7 +126,7 @@ public class RecipesControllerTest {
 
         ResponseEntity result = recipesControllerTest.show(validUid);
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
-        assertEquals(true, result.hasBody());
+        assert(result.hasBody());
 
         JSONObject body = (JSONObject)result.getBody();
         assertEquals(0, body.size());
@@ -142,11 +142,11 @@ public class RecipesControllerTest {
 
         ResponseEntity result = recipesControllerTest.preview(validUid);
         assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(true, result.hasBody());
+        assert(result.hasBody());
 
         JSONObject recipe = (JSONObject) result.getBody();
         JSONRecipeValidator validator = new JSONRecipeValidator();
-        assertEquals(true,validator.isValid(recipe));
+        assert(validator.isValid(recipe));
     }
 
     /**
@@ -159,7 +159,7 @@ public class RecipesControllerTest {
 
         ResponseEntity result = recipesControllerTest.preview(validUid);
         assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
-        assertEquals(true, result.hasBody());
+        assert(result.hasBody());
 
         JSONObject body = (JSONObject)result.getBody();
         assertEquals(0, body.size());
@@ -248,10 +248,10 @@ public class RecipesControllerTest {
     private void succesResponse( ResponseEntity result){
 
         assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(true,result.hasBody());
+        assert(result.hasBody());
 
         JSONObject body = (JSONObject) result.getBody();
-        assertEquals(true,body.containsKey("recipes"));
+        assert(body.containsKey("recipes"));
 
         Set<JSONObject> recipesList =  (Set<JSONObject>) body.get("recipes");
         assert(recipesList.size() > 0);
@@ -259,7 +259,7 @@ public class RecipesControllerTest {
         JSONRecipeValidator recipeValidator = new JSONRecipeValidator();
         try {
             for (JSONObject recipe : recipesList) {
-                assertEquals(true, recipeValidator.isValid(recipe));
+                assert(recipeValidator.isValid(recipe));
             }
         }
         catch (Exception e) {
