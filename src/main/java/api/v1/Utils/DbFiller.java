@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class DbFiller {
 
@@ -47,7 +48,7 @@ public class DbFiller {
     }
 
     private static ArrayList<JSONObject> apiCallResultsWith(String keyword) throws IOException {
-        String url = "https://api.edamam.com/search?q="+keyword+"&app_id="+app_id+"&app_key="+app_key+"&from=0&to=100";
+        String url = "https://api.edamam.com/search?q="+keyword+"&app_id="+app_id+"&app_key="+app_key+"&from=11&to=21";
         String response = responseFromGet( url );
         if( response.equals("not found") ) return new ArrayList<>();
         JSONObject response_json = new ObjectMapper().readValue(response, JSONObject.class);
@@ -100,14 +101,14 @@ public class DbFiller {
         return ingredients;
     }
 
-    private static Set getSteps(String recipe){
+    private static List getSteps(String recipe){
 
-        HashSet tasks = new HashSet();
+        ArrayList tasks = new ArrayList<>();
         Integer step_number = 3+ generateRandomBetween(1,9);
 
         for(int i = 1; i<= step_number; i++){
             String name = "Task number "+i;
-            String description = "This is the task with the number "+i+" of the recipe \\\""+recipe+
+            String description = "This is the task with the number "+i+" of the recipe "+recipe+
                                 " preparation. So, you should do "+mock_text;
             tasks.add(new Step(name,description));
         }

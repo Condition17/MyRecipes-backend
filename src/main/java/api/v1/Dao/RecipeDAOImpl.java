@@ -90,7 +90,7 @@ public class RecipeDAOImpl implements RecipeDAO{
     }
 
     @Override
-    public Integer addRecipe(Recipe recipe, Set images, Set ingredients, Set steps){
+    public Integer addRecipe(Recipe recipe, Set images, Set ingredients, List steps){
 
         Session session = this.sessionFactory.openSession();
         Transaction tx = null;
@@ -103,7 +103,6 @@ public class RecipeDAOImpl implements RecipeDAO{
             recipe.setIngredients(ingredients);
             recipe.setSteps(steps);
             recipeID = (Integer) session.save(recipe);
-
             tx.commit();
         }catch (HibernateException e) {
 

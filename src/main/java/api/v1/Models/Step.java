@@ -4,6 +4,15 @@ public class Step {
     private String name;
     private String description;
     private int id;
+    private long idx;
+
+    public long getIdx() {
+        return idx;
+    }
+
+    public void setIdx(long idx) {
+        this.idx = idx;
+    }
 
     public Step(){}
 

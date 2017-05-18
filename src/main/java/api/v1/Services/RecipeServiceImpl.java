@@ -49,7 +49,7 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public Integer addRecipe(Recipe recipe, Set images, Set ingredients, Set steps) {
+    public Integer addRecipe(Recipe recipe, Set images, Set ingredients, List steps) {
         return this.recipeDAO.addRecipe(recipe,images,ingredients,steps);
     }
 

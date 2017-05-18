@@ -12,6 +12,9 @@
             <generator class="native"/>
         </id>
 
+        <property name="idx" column="idx" type="long" insert="false" update="false">
+        </property>
+
         <property name="name" column="name" type="string"/>
         <property name="description" column="description" type="string"/>
     </class>

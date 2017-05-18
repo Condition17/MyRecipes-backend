@@ -9,5 +9,5 @@ public interface RecipeService {
     JSONObject getRecipeByUuid(String uuid);
     JSONObject getRecipePreview( String uuid);
     Set<JSONObject> searchRecipesBySentence(String sentence, Integer intial_row, Integer rows);
-    Integer addRecipe(Recipe recipe, Set images, Set ingeredients, Set steps);
+    Integer addRecipe(Recipe recipe, Set images, Set ingeredients, List steps);
 }

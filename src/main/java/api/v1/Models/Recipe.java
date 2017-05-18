@@ -3,6 +3,7 @@ package api.v1.Models;
 import org.hibernate.search.annotations.Indexed;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -19,7 +20,7 @@ public class Recipe {
     private String icon_image;
     private String uuid;
     private Set images;
-    private Set steps;
+    private List<Step> steps;
     private Set ingredients;
 
     public Recipe(String name, String difficulty, String description, int duration, String icon_image) {
@@ -97,11 +98,11 @@ public class Recipe {
         this.images = images;
     }
 
-    public Set getSteps() {
+    public List<Step> getSteps() {
         return steps;
     }
 
-    public void setSteps(Set steps) {
+    public void setSteps(List<Step> steps) {
         this.steps = steps;
     }
 

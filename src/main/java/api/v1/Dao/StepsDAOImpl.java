@@ -29,7 +29,7 @@ public class StepsDAOImpl implements StepsDAO {
         Session session = this.sessionFactory.openSession();
 
         List steps = session
-                .createQuery(" select steps from Recipe R where R.uuid = :uid")
+                .createQuery(" select S from Recipe R inner join R.steps S where R.uuid = :uid order by S.id")
                 .setParameter("uid",uid).list();
 
         return steps.size() > 0 ? steps : null;

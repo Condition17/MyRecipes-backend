@@ -106,7 +106,7 @@ public class RecipesControllerTest {
 
     private void succesRequestShow(){
 
-        String validUid = "2713e368-d693-47aa-8384-bc38393fa608";
+        String validUid = "291d2de5-9f8f-420f-8402-8aa444792214";
 
         ResponseEntity result = recipesControllerTest.show(validUid);
         assertEquals(HttpStatus.OK, result.getStatusCode());
@@ -139,7 +139,7 @@ public class RecipesControllerTest {
      */
     private void succesRequestPreview(){
 
-        String validUid = "2713e368-d693-47aa-8384-bc38393fa608";
+        String validUid = "291d2de5-9f8f-420f-8402-8aa444792214";
 
         ResponseEntity result = recipesControllerTest.preview(validUid);
         assertEquals(HttpStatus.OK, result.getStatusCode());

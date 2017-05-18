@@ -8,5 +8,5 @@ public interface RecipeDAO {
     Recipe getRecipeByUuid(String uuid);
     Recipe getRecipePreview(String uuid);
     List searchRecipesByKeyword( String keyword, Integer initial_row, Integer rows );
-    Integer addRecipe(Recipe recipe, Set images, Set ingredients, Set steps);
+    Integer addRecipe(Recipe recipe, Set images, Set ingredients, List steps);
 }
