@@ -44,7 +44,7 @@ public class StepsControllerTest {
 
     private void succesRequestShow(){
 
-        String validUid = "291d2de5-9f8f-420f-8402-8aa444792214";
+        String validUid = "291d2de5-9f8f-420f-8402-8aa444792";
 
         ResponseEntity result = stepsControllerTest.show(validUid);
         assertEquals(HttpStatus.OK, result.getStatusCode());
