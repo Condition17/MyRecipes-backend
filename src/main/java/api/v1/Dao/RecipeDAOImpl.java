@@ -34,7 +34,7 @@ public class RecipeDAOImpl implements RecipeDAO{
         Session session = this.sessionFactory.openSession();
 
         List recipes = session.
-                createQuery("select name, difficulty, duration, icon_image, uuid from Recipe ")
+                createQuery("select name, difficulty, duration, icon_image, uuid from Recipe R order by R.id")
                 .setFirstResult(initial_row)
                 .setMaxResults(rows).list();
 
