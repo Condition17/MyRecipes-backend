@@ -109,3 +109,4 @@ ALTER TABLE public.steps ALTER COLUMN description SET NOT NULL;
 ALTER TABLE public.steps ALTER COLUMN recipe_id DROP NOT NULL;
 ALTER TABLE public.recipes ALTER COLUMN description TYPE TEXT USING description::TEXT;
 ALTER TABLE public.images ALTER COLUMN recipe_id DROP NOT NULL;
+ALTER TABLE public.steps ADD idx INTEGER NULL;

@@ -3,6 +3,7 @@ package api.v1.Controllers;
 import api.v1.Controllers.StepsController;
 import api.v1.Utils.JSONStepValidator;
 import net.minidev.json.JSONObject;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ public class StepsControllerTest {
 
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void show(){
 
         succesRequestShow();

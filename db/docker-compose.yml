@@ -1,6 +1,7 @@
 version: '2'
 services:
   db:
+    container_name: myrecipespg
     image: postgres
     restart: always
     environment:
@@ -8,13 +9,8 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: recipes
     volumes:
-      - ./data:/var/lib/postgresql
+      - myrecipes_localdb:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-  web:
-    container_name: myrecipe_server
-    build: "."
-    ports:
-      - "8080:8080"
-    links:
-      - db
+volumes:
+  myrecipes_localdb:
